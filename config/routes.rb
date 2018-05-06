@@ -141,5 +141,6 @@ Myapp::Application.routes.draw do
 
   get "landing/index"
 
+  get "/redox", to: "redox#index"
   post "/redox", to: "redox#index"
 end
