@@ -4,7 +4,7 @@ class RedoxController < ApplicationController
     def index
         verification_token = request.headers["verification-token"]
         if verification_token == "docIOHealthHack2018"
-            render :json => {"body": "success"}
+            render status: 200, json: @controller.to_json
         end
     end
 
