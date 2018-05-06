@@ -1,12 +1,11 @@
 class RedoxController < ApplicationController
     skip_before_action :verify_authenticity_token 
-
     def index
         if request.get?
-            puts "get call"
+            puts "get POST"
             verification_token = request.headers["verification-token"]
             if verification_token == "docIOHealthHack2018"
-                render html: params["challenge"]
+                render body: params["challenge"]
             end
         end
         if request.post?
