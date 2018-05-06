@@ -10,3 +10,4 @@
 //= require jvectormap/jquery-jvectormap-world-mill-en.js
 //= require toastr/toastr.min.js
 //= require jsKnob/jquery.knob.js
+
