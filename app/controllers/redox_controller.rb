@@ -6,7 +6,7 @@ class RedoxController < ApplicationController
             puts "get call"
             verification_token = request.headers["verification-token"]
             if verification_token == "docIOHealthHack2018"
-                render status: 200, json: request.query_parameters["challenge"]
+                render status: 200, json: params["challenge"]
             end
         end
         if request.post?
