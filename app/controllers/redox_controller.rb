@@ -6,7 +6,9 @@ class RedoxController < ApplicationController
             puts "get call"
             verification_token = request.headers["verification-token"]
             if verification_token == "docIOHealthHack2018"
-                render html: params["challenge"]
+                respond_to do |format|
+                    format.json { render :json => {"challenge": params["challenge"] } }
+                end
             end
         end
         if request.post?
